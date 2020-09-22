@@ -1,0 +1,90 @@
+---
+name: Hussein Mahfouz
+position: "Transport Researcher"
+address: "Cairo, Egypt"
+email: "husseinmahfouz93@gmail.com"
+twitter: h_mahfouz
+github: Hussein-Mahfouz
+linkedin: hussein-mahfouz
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 414141
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tidyverse)
+```
+
+# Education
+
+
+```{r education}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Studied many aspects of quantitative geography, network analysis, and spatial data science",
+    "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Dissertation on prioritizing road segments for dedicating cycling infrastructure  \\href{https://github.com/Hussein-Mahfouz/Bicycle-Network-Optimization}{[github link]}.",
+    "BSc (Hons) in Construction Engineering", "The American University in Cairo", "Cairo, Egypt", "Sep. 2011 - Jun. 2016", "Focused on Structural Engineering and Project Management",
+
+) %>% 
+  detailed_entries(degree, dates, uni, loc, details, .protect = FALSE)
+```
+
+# Work Experience
+
+```{r consulting}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019", "Contributed in a research capacity towards a bus study in Greater Cairo.",
+  "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019", "In charge of fieldwork for mapping entire formal and informal public transport networks of the Greater Cairo Region.",
+  "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Carried out research on informal transportation on Cairo’s Ring Road.",
+  "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Working on gaining insights into transportation sector through data-driven research.",  
+  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the mobility program which supported the government in shifting towards an integrated transportation system. Solutions included a BRT system, bike infrastructure and improved commuting information.",  
+  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the Land Readjustment project which provided inclusive solutions to the issue of urban sprawl on agricultural land.",  
+
+) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
+
+
+# Technical Skills 
+
+```{r tech}
+tribble(
+  ~ skill, ~ details,
+  "Programming Languages", "Python, R, Javascript (Basic).",
+  "Markup Languages", "CSS, HTML, LATEX, RMarkdown.",
+  "Spatial Analysis and Cartography", "R, QGIS.",
+  "Databases", "MySQL.",
+  "Transport Related Data Standards", "GTFS.",
+) %>% 
+  brief_entries(glue::glue("\\textbf{<skill>}: <details>", .open = "<", .close = ">"), .protect = FALSE)
+```
+
+# Publications
+```{r pubs}
+tribble(
+  ~ name, ~ client, ~ date, ~type, ~ bib,
+  "Multimodal network planning, identification of high capacity bus corridor and park and ride facilities in the Greater Cairo Region","World Bank Report","08, 2019","Report","Hegazy, M., Kalila, A., \\textbf{Mahfouz, H.} (2019). “Multimodal Network Planning,
+Identification of High Capacity Bus Corridor and Park and Ride Facilities.” World Bank
+Group.",
+) %>% 
+  mutate(date = as.Date(paste("01", date), format = "%d %m, %Y")) %>% 
+  dplyr::arrange(desc(date)) %>% 
+  mutate(date = format(date, "%m, %Y")) %>% 
+  detailed_entries(with = name, what = client, when = date, where = type, why = bib, .protect=FALSE)
+```
+
+# Languages
+
+```{r lang}
+tribble(
+  ~ lang, ~ level,
+  "Arabic", "Mother Tongue.",
+  "English", "Mother Tongue.",
+  "French", "Basic.",
+) %>% 
+  brief_entries(glue::glue("\\textbf{<lang>}: <level>", .open = "<", .close = ">"), .protect = FALSE)
+```
+
