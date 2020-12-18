@@ -23,9 +23,9 @@ library(tidyverse)
 ```{r education}
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
-  "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Studied many aspects of quantitative geography, network analysis, and spatial data science",
+  "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Studied many aspects of quantitative geography, network analysis, and statistics.",
     "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Dissertation on prioritizing road segments for dedicating cycling infrastructure  \\href{https://github.com/Hussein-Mahfouz/Bicycle-Network-Optimization}{[github link]}.",
-    "BSc (Hons) in Construction Engineering", "The American University in Cairo", "Cairo, Egypt", "Sep. 2011 - Jun. 2016", "Focused on Structural Engineering and Project Management",
+    "BSc (High Honors) in Construction Engineering", "The American University in Cairo", "Cairo, Egypt", "Sep. 2011 - Jun. 2016", "Focused on Structural Engineering and Project Management.",
 
 ) %>% 
   detailed_entries(degree, dates, uni, loc, details, .protect = FALSE)
@@ -36,11 +36,13 @@ tribble(
 ```{r consulting}
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
-  "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019", "Contributed in a research capacity towards a bus study in Greater Cairo.",
-  "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019", "In charge of fieldwork for mapping entire formal and informal public transport networks of the Greater Cairo Region.",
+   "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on the WB funded 'Greater Cairo Region Mobility Assessment and Public Transport Improvement Study' (MAPTIS). Tasks included drafting a sampling strategy for data collection, data monitoring and validation, conducting an employment accessibility analysis, and report writing.",
+     "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Developing and maintaining software to convert transit GIS data to GTFS feeds.",
+  "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Contributed in a research capacity towards a bus study in Greater Cairo.",
+  "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "In charge of fieldwork for mapping entire formal and informal public transport networks of the Greater Cairo Region.",
   "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Carried out research on informal transportation on Cairo’s Ring Road.",
   "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Working on gaining insights into transportation sector through data-driven research.",  
-  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the mobility program which supported the government in shifting towards an integrated transportation system. Solutions included a BRT system, bike infrastructure and improved commuting information.",  
+  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the mobility program which supported the government in shifting towards an integrated transportation system. Proposed solutions included a BRT system, bike infrastructure and improved commuting information.",  
   "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the Land Readjustment project which provided inclusive solutions to the issue of urban sprawl on agricultural land.",  
 
 ) %>% 
@@ -54,9 +56,9 @@ tribble(
 tribble(
   ~ skill, ~ details,
   "Programming Languages", "Python, R, Javascript (Basic).",
-  "Markup Languages", "CSS, HTML, LATEX, RMarkdown.",
+  "Markup Languages", "CSS, HTML, LaTeX, RMarkdown.",
   "Spatial Analysis and Cartography", "R, QGIS.",
-  "Databases", "MySQL.",
+  "Databases", "PostgreSQL/PostGIS, MySQL, dbplyr.",
   "Transport Related Data Standards", "GTFS.",
 ) %>% 
   brief_entries(glue::glue("\\textbf{<skill>}: <details>", .open = "<", .close = ">"), .protect = FALSE)
