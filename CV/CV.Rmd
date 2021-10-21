@@ -9,12 +9,19 @@ linkedin: hussein-mahfouz
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 414141
 output: vitae::awesomecv
+header-includes:
+  \usepackage{float}
 ---
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 library(tidyverse)
+library(kableExtra)
 ```
 
 # Education
@@ -23,8 +30,9 @@ library(tidyverse)
 ```{r education}
 tribble(
   ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
-  "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Studied many aspects of quantitative geography, network analysis, and statistics.",
-    "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Dissertation on prioritizing road segments for dedicating cycling infrastructure  \\href{https://github.com/Hussein-Mahfouz/Bicycle-Network-Optimization}{[github link]}.",
+  "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Studied quantitative geography, network analysis, statistics and urban systems theory.",
+    "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Dissertation: Prioritizing Road Segments for Investment in Segregated Cycling Infrastructure - A Methodological Framework \\href{https://github.com/Hussein-Mahfouz/Bicycle-Network-Optimization}{[github link]}.",
+    "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Received the RGS-IBG GIScience Dissertation Prize \\href{https://geoinfo.science/2021/01/25/dissertation-prize-winners-2020/}{[link]}.",
     "BSc (High Honors) in Construction Engineering", "The American University in Cairo", "Cairo, Egypt", "Sep. 2011 - Jun. 2016", "Focused on Structural Engineering and Project Management.",
 
 ) %>% 
@@ -36,34 +44,68 @@ tribble(
 ```{r consulting}
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
-   "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on the WB funded 'Greater Cairo Region Mobility Assessment and Public Transport Improvement Study' (MAPTIS). Tasks included drafting a sampling strategy for data collection, data monitoring and validation, conducting an employment accessibility analysis, and report writing.",
-     "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Developing and maintaining software to convert transit GIS data to GTFS feeds.",
-  "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Contributed in a research capacity towards a bus study in Greater Cairo.",
-  "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "In charge of fieldwork for mapping entire formal and informal public transport networks of the Greater Cairo Region.",
+   "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on the World Bank funded \\emph{Greater Cairo Region Mobility Assessment and Public Transport Improvement Study (MAPTIS)}.  \\begin{itemize}
+        \\item Drafted a sampling strategy for primary data collection 
+        \\item Data cleaning and validation 
+        \\item Data analysis scripts: travel time estimations and GTFS feed creation; employment accessibility analysis; road segment passenger flow analysis; and boarding and alighting patterns
+    \\end{itemize}",
+     "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on the \\emph{Ghana Urban Mobility and Accessibility Project (GUMAP)} component on \\emph{Short term technical assistance for the completion of databases and maps of public transport routes and passenger flows in GAMA}. \\begin{itemize}
+        \\item Managed the field research operation 
+        \\item Conducted knowledge transfer workshops for the local departments of transport
+        \\item Analysed the public transport network of Greater Accra, and co-authored project reports
+    \\end{itemize}",
+     "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on creating a spatial model of employment of Casablanca, Morocco for the World Bank \\begin{itemize}
+        \\item Web scraping and data cleaning
+        \\item Matching census figures with primary data and accounting for informal employment
+        \\item Documenting the process in reproducible markdown files with embedded code
+    \\end{itemize}",
+    "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Contributed in a research capacity towards a World Bank funded study: \\emph{Multimodal Transport Strategy for the Greater Cairo Region}. \\begin{itemize}
+        \\item In charge of fieldwork for mapping entire formal and informal public transport networks of the Greater Cairo Region
+    \\end{itemize}",
+     "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Research and Development. \\begin{itemize}
+        \\item Developing and maintaining software to convert transit GIS data from primary data collection to GTFS feeds that are used for trip planning and analysis tasks
+        \\item Model road segment-level travel speeds for different travel modes using gps trackpoints from primary data collection exercises
+    \\end{itemize}",
   "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Carried out research on informal transportation on Cairo’s Ring Road.",
-  "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Working on gaining insights into transportation sector through data-driven research.",  
-  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the mobility program which supported the government in shifting towards an integrated transportation system. Proposed solutions included a BRT system, bike infrastructure and improved commuting information.",  
-  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the Land Readjustment project which provided inclusive solutions to the issue of urban sprawl on agricultural land.",  
+  "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Worked on gaining insights into transportation sector through data-driven research.",  
+  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the mobility program which supported the government in shifting towards an integrated transportation system. Proposed solutions included a BRT system, bike infrastructure and improved passenger information.",  
+  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on a land readjustment project which provided inclusive solutions to the issue of urban sprawl on agricultural land.",  
 
 ) %>% 
-  detailed_entries(role, dates, company, loc, details)
+  detailed_entries(role, dates, company, loc, details, .protect = F)
 ```
 
+<!-- # Technical Skills  -->
 
-# Technical Skills 
+<!-- ```{r tech} -->
+<!-- tribble( -->
+<!--   ~ skill, ~ details, -->
+<!--   "Programming Languages", "R, Python, SQL, Javascript (Basic).", -->
+<!--   "Markup Languages", "CSS, HTML, LaTeX, RMarkdown.", -->
+<!--   "Spatial Analysis and Cartography", "R, QGIS.", -->
+<!--   "Databases", "PostgreSQL/PostGIS, MySQL, dbplyr.", -->
+<!--   "Transport Related Data Standards", "GTFS.", -->
+<!-- ) %>%  -->
+<!--   brief_entries(glue::glue("\\textbf{<skill>}: <details>", .open = "<", .close = ">"), .protect = FALSE) -->
+<!-- ``` -->
 
-```{r tech}
+# Technical Skills
+
+```{r tech, results='markup'}
 tribble(
-  ~ skill, ~ details,
-  "Programming Languages", "Python, R, Javascript (Basic).",
-  "Markup Languages", "CSS, HTML, LaTeX, RMarkdown.",
-  "Spatial Analysis and Cartography", "R, QGIS.",
-  "Databases", "PostgreSQL/PostGIS, MySQL, dbplyr.",
-  "Transport Related Data Standards", "GTFS.",
-) %>% 
-  brief_entries(glue::glue("\\textbf{<skill>}: <details>", .open = "<", .close = ">"), .protect = FALSE)
+   ~`Coding Languages`, ~Software, ~`Markup Languages`,
+   "R -- Python -- SQL",
+  "Git -- QGIS -- PostgreSQL/PostGIS",
+  "CSS -- HTML -- \\LaTeX -- RMarkdown"
+) %>%
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") %>%
+  kable_styling(full_width = F, font_size = 9, latex_options = "hold_position") %>% 
+  row_spec(0, bold = T, color = "#414141") %>% 
+  row_spec(1, bold = F, color = "#7f7f7f") %>% 
+  column_spec(column = 1:3, width = '4.75cm')
 ```
 
+\pagebreak
 # Publications
 ```{r pubs}
 tribble(
@@ -71,6 +113,7 @@ tribble(
   "Multimodal network planning, identification of high capacity bus corridor and park and ride facilities in the Greater Cairo Region","World Bank Report","08, 2019","Report","Hegazy, M., Kalila, A., \\textbf{Mahfouz, H.} (2019). “Multimodal Network Planning,
 Identification of High Capacity Bus Corridor and Park and Ride Facilities.” World Bank
 Group.",
+  "A Road Segment Prioritization Approach for Cycling Infrastructure","arXiv","04, 2021","Preprint","\\textbf{Mahfouz, H.}, Arcuate, E., Lovelace, R. (2021). “A Road Segment Prioritization Approach for Cycling Infrastructure. arXiv. \\textit{https://arxiv.org/abs/2105.03712}”"
 ) %>% 
   mutate(date = as.Date(paste("01", date), format = "%d %m, %Y")) %>% 
   dplyr::arrange(desc(date)) %>% 
@@ -78,14 +121,24 @@ Group.",
   detailed_entries(with = name, what = client, when = date, where = type, why = bib, .protect=FALSE)
 ```
 
+# Awards
+
+```{r dist}
+tribble(
+  ~ area, ~ org, ~ date,
+  "RGS-IBG GIScience Dissertation Award", "Royal Geographic Society", "2020",
+) %>% 
+  brief_entries(what = area, when = date, with = org, .protect = F)
+```
+
 # Languages
 
 ```{r lang}
 tribble(
   ~ lang, ~ level,
-  "Arabic", "Mother Tongue.",
-  "English", "Mother Tongue.",
-  "French", "Basic.",
+  "Arabic", "Native.",
+  "English", "Proficient User.",
+  "French", "Basic User.",
 ) %>% 
   brief_entries(glue::glue("\\textbf{<lang>}: <level>", .open = "<", .close = ">"), .protect = FALSE)
 ```
