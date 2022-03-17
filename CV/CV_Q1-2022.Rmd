@@ -1,13 +1,13 @@
 ---
 name: Hussein Mahfouz
-position: "Transport Researcher"
+position: "Senior Associate - Urban Analytics"
 address: "Cairo, Egypt"
 email: "husseinmahfouz93@gmail.com"
 twitter: h_mahfouz
 github: Hussein-Mahfouz
 linkedin: hussein-mahfouz
 date: "`r format(Sys.time(), '%B %Y')`"
-geometry: margin=20mm
+#geometry: margin=20mm
 headcolor: 414141
 output: vitae::awesomecv
 header-includes:
@@ -34,6 +34,11 @@ tribble(
   "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Studied quantitative geography, network analysis, statistics and urban systems theory.",
     "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Dissertation: Prioritizing Road Segments for Investment in Segregated Cycling Infrastructure - A Methodological Framework \\href{https://github.com/Hussein-Mahfouz/Bicycle-Network-Optimization}{[github link]}.",
     "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Received the RGS-IBG GIScience Dissertation Prize \\href{https://geoinfo.science/2021/01/25/dissertation-prize-winners-2020/}{[link]}.",
+    "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Selected Projects: \\begin{itemize}
+        \\item Solving the Dead Mileage Problem for the Bus Fleet of the Cairo Transport Authority (CTA) using Linear Optimization \\href{https://github.com/Hussein-Mahfouz/CASA-QM}{[link]}
+        \\item Transport Accessibilty Analysis in Greater Cairo - The role of informal transport \\href{https://github.com/Hussein-Mahfouz/GIS-Coursework}{[link]}
+        \\item Transport profiles in England and Wales (Cluster Analysis, Classification, and Web Vizualization) \\href{https://uktransportprofiles.co.uk/index.html}{[link]}
+    \\end{itemize}",
     "BSc (High Honors) in Construction Engineering", "The American University in Cairo", "Cairo, Egypt", "Sep. 2011 - Jun. 2016", "Focused on Structural Engineering and Construction Project Management.",
 
 ) %>% 
@@ -45,70 +50,81 @@ tribble(
 ```{r consulting}
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
-   "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on the World Bank funded \\emph{Greater Cairo Region Mobility Assessment and Public Transport Improvement Study (MAPTIS)}.  \\begin{itemize}
+     "Senior Research Associate", "Transport for Cairo", "Cairo, Egypt", "Jan. '22 - Now", "Technical Lead for a project funded by the New Urban Mobility Alliance (NUMO) \\emph{Using New Urban Mobility Data in Accessibility Analysis}.  \\begin{itemize}
+        \\item Studied the impact of Micromobility on Accessibility to opportunities, focusing on travel time improvements, micromobility supply constraints, and equity of access to opportunities
+        \\item Responsible for literature review, methodology, data analysis, and project management
+        \\item Data analysis scripts: augmenting OSM PBF files with realistic speeds from UBER/Mapbox data; Travel time matrix for different mode combinations (including micromobility) using r5r; cumulative accessibility calculations; equity of spatial distribution of accessibility
+    \\end{itemize}",
+   "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on the World Bank funded \\emph{Greater Cairo Region Mobility Assessment and Public Transport Improvement Study (MAPTIS)}.  \\begin{itemize}
         \\item Drafted a sampling strategy for primary data collection 
         \\item Cleaned, validated, and prepared datasets for input into a four-step model
-        \\item Data analysis scripts: travel time estimations and GTFS feed creation; employment accessibility analysis; road segment passenger flow analysis; and boarding and alighting patterns
+        \\item Data analysis scripts: travel time estimations (from GPS data) and GTFS feed creation; employment accessibility analysis; road segment passenger flow analysis; spatiotemporal boarding and alighting patterns
     \\end{itemize}",
-     "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on the \\emph{Ghana Urban Mobility and Accessibility Project (GUMAP)} component on \\emph{Short term technical assistance for the completion of databases and maps of public transport routes and passenger flows in GAMA}. \\begin{itemize}
+     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on the \\emph{Ghana Urban Mobility and Accessibility Project (GUMAP)} component on \\emph{Short term technical assistance for the completion of databases and maps of public transport routes and passenger flows in GAMA}. \\begin{itemize}
         \\item Managed the field research operation 
         \\item Conducted knowledge transfer workshops on data collection and analysis for the local departments of transport
         \\item Analysed the public transport network of Greater Accra, and co-authored project reports
     \\end{itemize}",
-     "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on creating a spatial model of employment of Casablanca, Morocco for the World Bank \\begin{itemize}
+     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on creating a spatial model of employment of Casablanca, Morocco for the World Bank \\begin{itemize}
         \\item Proposed and implemented a methodology to create spatially disaggregated employment datasets in a data-poor context, accounting for informal employment
         \\item Documented the process in reproducible markdown files with embedded code
     \\end{itemize}",
-    "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Worked on the World Bank funded study: \\emph{Multimodal Transport Strategy for the Greater Cairo Region}. \\begin{itemize}
+    "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on the World Bank funded study: \\emph{Multimodal Transport Strategy for the Greater Cairo Region}. \\begin{itemize}
         \\item In charge of fieldwork for mapping entire formal and informal public transport networks of the Greater Cairo Region
           \\item Developed a methodology to quantify and compare the impact of proposed bus corridors on regional accessibility
     \\end{itemize}",
-     "Research Associate", "Transport for Cairo", "Cairo, Egypt", "Sep. 2018 - Aug. 2019 / Sep. 2020 - Now", "Research and Development. \\begin{itemize}
-        \\item Developing and maintaining software to convert transit GIS data from primary data collection to GTFS feeds that are used for trip planning and analysis tasks
+     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Research and Development. \\begin{itemize}
+        \\item Developing and maintaining software to convert transit GIS data from primary data collection to GTFS feeds that are used for trip planning and analysis tasks (feeds contain both formal and informal modes of public transport)
         \\item Modelling road segment-level travel speeds for different travel modes using gps trackpoints from primary data collection exercises
+        \\item Creating spatially disaggregated models of employment for cities without such data
     \\end{itemize}",
-  "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Worked on gaining insights into transportation sector through data-driven research.",  
-  "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Carried out research on informal transportation on Cairo’s Ring Road. The research focused on how informal transportation fills demand gaps, and the role of unofficial access points in accessibility to transport",
-    "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. 2018 - Sep. 2018 ", "Carried out research on the impact of ride-sharing applications on the livelihoods and safety of women in Egypt",
-    # "Conscript", "Egyptian Armed Forces", "Cairo, Egypt", "Jan. 2017 - Mar. 2018 ", "1 year mandatory conscription spent with the Egyptian Air Force.",  
-  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on the mobility program which supported the government in shifting towards an integrated transportation system. Proposed solutions included a BRT system, bike infrastructure and improved passenger information.",  
-  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. 2016 - Dec. 2016 ", "Worked on a land readjustment project which provided inclusive solutions to the issue of urban sprawl on agricultural land.",  
+  "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. '18 - Sep. '18 ", "Worked on gaining insights into transportation sector through data-driven research",  
+  "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. '18 - Sep. '18 ", "Carried out research on informal transportation on Cairo’s Ring Road. The research focused on how informal transportation fills demand gaps, and the role of unofficial access points in accessibility to transport",
+    "Research Assistant", "Access to Knowledge for Development Center", "Cairo, Egypt", "Mar. '18 - Sep. '18 ", "Carried out research on the impact of ride-sharing applications on the livelihoods and safety of women in Egypt",
+    # "Conscript", "Egyptian Armed Forces", "Cairo, Egypt", "Jan. 2017 - Mar. 2018 ", "1 year mandatory conscription spent with the Egyptian Air Force",  
+  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. '16 - Dec. '16 ", "Worked on the mobility program which supported the government in shifting towards an integrated transportation system. Proposed solutions included a BRT system, bike infrastructure and improved passenger information",  
+  "Intern", "UN-Habitat", "Cairo, Egypt", "Jul. '16 - Dec. '16 ", "Worked on a land readjustment project which provided inclusive solutions to the issue of urban sprawl on agricultural land",  
 
 ) %>% 
   detailed_entries(role, dates, company, loc, details, .protect = F)
 ```
 
-<!-- # Technical Skills  -->
-
-<!-- ```{r tech} -->
-<!-- tribble( -->
-<!--   ~ skill, ~ details, -->
-<!--   "Programming Languages", "R, Python, SQL, Javascript (Basic).", -->
-<!--   "Markup Languages", "CSS, HTML, LaTeX, RMarkdown.", -->
-<!--   "Spatial Analysis and Cartography", "R, QGIS.", -->
-<!--   "Databases", "PostgreSQL/PostGIS, MySQL, dbplyr.", -->
-<!--   "Transport Related Data Standards", "GTFS.", -->
-<!-- ) %>%  -->
-<!--   brief_entries(glue::glue("\\textbf{<skill>}: <details>", .open = "<", .close = ">"), .protect = FALSE) -->
-<!-- ``` -->
-
 # Technical Skills
 
-```{r tech, results='markup'}
+```{r tech v1}
 tribble(
-   ~`Coding Languages`, ~Software, ~`Markup Languages`,
-   "R -- Python -- SQL",
-  "Git -- QGIS -- PostgreSQL/PostGIS",
-  "CSS -- HTML -- \\LaTeX -- RMarkdown"
+  ~ skill, ~ details,
+  # "Programming Languages", "\\begin{itemize}
+  #       \\item R: tidyverse, data.table, r-spatial, ggplot, tmap
+  #       \\item Python: pandas, numpy, geopandas, networkx, osmnx, scikit-learn
+  #       \\item SQL
+  #   \\end{itemize}",
+  "Programming Languages (selected packages)", "R (tidyverse, data.table, sf, terra, sfnetworks, dodgr, r5r, gtfsrouter, ggplot, tmap), Python (pandas, numpy, geopandas, networkx, osmnx, scikit-learn), SQL",
+  "Markup Languages", "CSS, HTML, LaTeX, RMarkdown",
+  "Spatial Analysis and Cartography", "R, QGIS",
+  "Databases", "PostgreSQL/PostGIS, MySQL, dbplyr",
+  "Transport Related Data Standards", "GTFS",
 ) %>%
-  kable(booktabs = T, align = 'c', escape = F, format = "latex") %>%
-  kable_styling(full_width = F, font_size = 9, latex_options = "hold_position") %>% 
-  row_spec(0, bold = T, color = "#414141") %>% 
-  row_spec(1, bold = F, color = "#7f7f7f") %>% 
-  column_spec(column = 1:3, width = '4.75cm')
+  brief_entries(glue::glue("\\textbf{<skill>}: <details>", .open = "<", .close = ">"), .protect = FALSE)
 ```
 
-\pagebreak
+<!-- # Technical Skills -->
+
+<!-- ```{r tech, results='markup'} -->
+<!-- tribble( -->
+<!--    ~`Coding Languages (Selected packages)`, ~Software, ~`Markup Languages`, -->
+<!--    "R -- Python -- SQL", -->
+<!--   "Git -- QGIS -- PostgreSQL/PostGIS", -->
+<!--   "CSS -- HTML -- \\LaTeX -- RMarkdown" -->
+<!-- ) %>% -->
+<!--   kable(booktabs = T, align = 'c', escape = F, format = "latex") %>% -->
+<!--   kable_styling(full_width = F, font_size = 9, latex_options = "hold_position") %>%  -->
+<!--   row_spec(0, bold = T, color = "#414141") %>%  -->
+<!--   row_spec(1, bold = F, color = "#7f7f7f") %>%  -->
+<!--   column_spec(column = 1:3, width = '4.75cm') -->
+<!-- ``` -->
+
+<!-- \pagebreak -->
 
 <!-- # Soft Skills -->
 
