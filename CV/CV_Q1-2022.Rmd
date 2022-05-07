@@ -36,7 +36,7 @@ tribble(
     "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Received the RGS-IBG GIScience Dissertation Prize \\href{https://geoinfo.science/2021/01/25/dissertation-prize-winners-2020/}{[link]}.",
     "MSc (Distinction) in Smart Cities and Urban Analytics", "University College London", "London, UK", "Sep. 2019 - Aug. 2020", "Selected Projects: \\begin{itemize}
         \\item Solving the Dead Mileage Problem for the Bus Fleet of the Cairo Transport Authority (CTA) using Linear Optimization \\href{https://github.com/Hussein-Mahfouz/CASA-QM}{[link]}
-        \\item Transport Accessibilty Analysis in Greater Cairo - The role of informal transport \\href{https://github.com/Hussein-Mahfouz/GIS-Coursework}{[link]}
+        \\item Transport Accessibility Analysis in Greater Cairo - The role of informal transport \\href{https://github.com/Hussein-Mahfouz/GIS-Coursework}{[link]}
         \\item Transport profiles in England and Wales (Cluster Analysis, Classification, and Web Vizualization) \\href{https://uktransportprofiles.co.uk/index.html}{[link]}
     \\end{itemize}",
     "BSc (High Honors) in Construction Engineering", "The American University in Cairo", "Cairo, Egypt", "Sep. 2011 - Jun. 2016", "Focused on Structural Engineering and Construction Project Management.",
@@ -53,7 +53,7 @@ tribble(
      "Senior Research Associate", "Transport for Cairo", "Cairo, Egypt", "Jan. '22 - Now", "Technical Lead for a project funded by the New Urban Mobility Alliance (NUMO) \\emph{Using New Urban Mobility Data in Accessibility Analysis}.  \\begin{itemize}
         \\item Studied the impact of Micromobility on Accessibility to opportunities, focusing on travel time improvements, micromobility supply constraints, and equity of access to opportunities
         \\item Responsible for literature review, methodology, data analysis, and project management
-        \\item Data analysis scripts: augmenting OSM PBF files with realistic speeds from UBER/Mapbox data; Travel time matrix for different mode combinations (including micromobility) using r5r; cumulative accessibility calculations; equity of spatial distribution of accessibility
+        \\item Data analysis scripts: augmenting OSM PBF files with realistic speeds from UBER/Mapbox data; Travel time matrix for different mode combinations (including micromobility) using r5r (calculated by running code in a docker image on a Digital Ocean droplet); cumulative accessibility calculations; equity of spatial distribution of accessibility
     \\end{itemize}",
    "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on the World Bank funded \\emph{Greater Cairo Region Mobility Assessment and Public Transport Improvement Study (MAPTIS)}.  \\begin{itemize}
         \\item Drafted a sampling strategy for primary data collection 
@@ -99,11 +99,12 @@ tribble(
   #       \\item Python: pandas, numpy, geopandas, networkx, osmnx, scikit-learn
   #       \\item SQL
   #   \\end{itemize}",
-  "Programming Languages (selected packages)", "R (tidyverse, data.table, sf, terra, sfnetworks, dodgr, r5r, gtfsrouter, ggplot, tmap), Python (pandas, numpy, geopandas, networkx, osmnx, scikit-learn), SQL",
+  "Programming Languages (selected packages)", "R (tidyverse, data.table, sf, terra, sfnetworks, dodgr, r5r, gtfsrouter, ggplot, tmap), Python (pandas, numpy, scipy, scikit-learn, geopandas, networkx, osmnx), SQL",
   "Markup Languages", "CSS, HTML, LaTeX, RMarkdown",
   "Spatial Analysis and Cartography", "R, QGIS",
   "Databases", "PostgreSQL/PostGIS, MySQL, dbplyr",
-  "Transport Related Data Standards", "GTFS",
+  "Version Control", "Git",
+  "Transport Related Data Standards", "GTFS, GBFS",
 ) %>%
   brief_entries(glue::glue("\\textbf{<skill>}: <details>", .open = "<", .close = ">"), .protect = FALSE)
 ```
