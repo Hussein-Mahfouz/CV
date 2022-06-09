@@ -55,25 +55,25 @@ tribble(
         \\item Responsible for literature review, methodology, data analysis, and project management
         \\item Data analysis scripts: augmenting OSM PBF files with realistic speeds from UBER/Mapbox data; Travel time matrix for different mode combinations (including micromobility) using r5r (calculated by running code in a docker image on a Digital Ocean droplet); cumulative accessibility calculations; equity of spatial distribution of accessibility
     \\end{itemize}",
-   "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on the World Bank funded \\emph{Greater Cairo Region Mobility Assessment and Public Transport Improvement Study (MAPTIS)}.  \\begin{itemize}
+   "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '21", "Worked on the World Bank funded \\emph{Greater Cairo Region Mobility Assessment and Public Transport Improvement Study (MAPTIS)}.  \\begin{itemize}
         \\item Drafted a sampling strategy for primary data collection 
         \\item Cleaned, validated, and prepared datasets for input into a four-step model
         \\item Data analysis scripts: travel time estimations (from GPS data) and GTFS feed creation; employment accessibility analysis; road segment passenger flow analysis; spatiotemporal boarding and alighting patterns
     \\end{itemize}",
-     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on the \\emph{Ghana Urban Mobility and Accessibility Project (GUMAP)} component on \\emph{Short term technical assistance for the completion of databases and maps of public transport routes and passenger flows in GAMA}. \\begin{itemize}
+     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '21", "Worked on the \\emph{Ghana Urban Mobility and Accessibility Project (GUMAP)} component on \\emph{Short term technical assistance for the completion of databases and maps of public transport routes and passenger flows in GAMA}. \\begin{itemize}
         \\item Managed the field research operation 
         \\item Conducted knowledge transfer workshops on data collection and analysis for the local departments of transport
         \\item Analysed the public transport network of Greater Accra, and co-authored project reports
     \\end{itemize}",
-     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on creating a spatial model of employment of Casablanca, Morocco for the World Bank \\begin{itemize}
+     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '21", "Worked on creating a spatial model of employment of Casablanca, Morocco for the World Bank \\begin{itemize}
         \\item Proposed and implemented a methodology to create spatially disaggregated employment datasets in a data-poor context, accounting for informal employment
         \\item Documented the process in reproducible markdown files with embedded code
     \\end{itemize}",
-    "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Worked on the World Bank funded study: \\emph{Multimodal Transport Strategy for the Greater Cairo Region}. \\begin{itemize}
+    "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '21", "Worked on the World Bank funded study: \\emph{Multimodal Transport Strategy for the Greater Cairo Region}. \\begin{itemize}
         \\item In charge of fieldwork for mapping entire formal and informal public transport networks of the Greater Cairo Region
           \\item Developed a methodology to quantify and compare the impact of proposed bus corridors on regional accessibility
     \\end{itemize}",
-     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '20", "Research and Development. \\begin{itemize}
+     "Research Associate", "", "Cairo, Egypt", "Sep. '18 - Aug. '19 / Sep. '20 - Dec. '21", "Research and Development. \\begin{itemize}
         \\item Developing and maintaining software to convert transit GIS data from primary data collection to GTFS feeds that are used for trip planning and analysis tasks (feeds contain both formal and informal modes of public transport)
         \\item Modelling road segment-level travel speeds for different travel modes using gps trackpoints from primary data collection exercises
         \\item Creating spatially disaggregated models of employment for cities without such data
